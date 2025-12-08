@@ -1,14 +1,14 @@
 # IPTV Playlists Configuration File
 # Generated automatically - Do not edit manually
-# Last updated: 2025-12-09 04:19:49
+# Last updated: 2025-12-09 04:31:09
 
 metadata:
   title: IPTV Playlists Collection
   description: Auto-generated IPTV playlists configuration
   version: 1.0.0
-  generated_at: '2025-12-09 04:19:49'
+  generated_at: '2025-12-09 04:31:09'
   total_channels: 3
-  last_updated: 1765232389.7873728
+  last_updated: 1765233069.0224726
 sources:
 - https://iptv-org.github.io/iptv/index.m3u
 - https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8
