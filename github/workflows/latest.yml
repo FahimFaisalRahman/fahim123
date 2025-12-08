@@ -1,0 +1,39 @@
+name: Update IPTV Playlists
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Every 5 minutes
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: pip install pyyaml requests
+    
+    - name: Run updater script
+      run: |
+        # Create your Python script here or use an existing one
+        cat > updater.py << 'EOF'
+        # Your Python code from above
+        EOF
+        python updater.py
+    
+    - name: Commit and push
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        if ! git diff --cached --quiet; then
+          git commit -m "Auto-update playlists $(date)"
+          git push
+        fi
