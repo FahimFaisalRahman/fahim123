@@ -1,0 +1,67 @@
+# IPTV Playlists Configuration File
+# Generated automatically - Do not edit manually
+# Last updated: 2025-12-09 04:19:49
+
+metadata:
+  title: IPTV Playlists Collection
+  description: Auto-generated IPTV playlists configuration
+  version: 1.0.0
+  generated_at: '2025-12-09 04:19:49'
+  total_channels: 3
+  last_updated: 1765232389.7873728
+sources:
+- https://iptv-org.github.io/iptv/index.m3u
+- https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8
+categories:
+  News:
+    channel_count: 1
+    sample_channels:
+    - BBC News
+  Sports:
+    channel_count: 1
+    sample_channels:
+    - ESPN
+  Documentary:
+    channel_count: 1
+    sample_channels:
+    - Nat Geo
+channels:
+- id: 1
+  name: BBC News
+  group: News
+  logo: https://example.com/bbc.png
+  url: http://example.com/bbc.m3u8
+  source: iptv-org
+- id: 2
+  name: ESPN
+  group: Sports
+  logo: https://example.com/espn.png
+  url: http://example.com/espn.m3u8
+  source: iptv-org
+- id: 3
+  name: Nat Geo
+  group: Documentary
+  logo: https://example.com/natgeo.png
+  url: http://example.com/natgeo.m3u8
+  source: free-tv
+statistics:
+  total: 3
+  by_group:
+    News: 1
+    Sports: 1
+    Documentary: 1
+  by_source:
+    iptv-org: 2
+    free-tv: 1
+  url_patterns:
+    http: 3
+    https: 0
+    m3u8: 3
+    mp4: 0
+    mpegts: 0
+settings:
+  update_frequency: daily
+  format: m3u
+  encoding: utf-8
+  include_metadata: true
+  deduplicate: true
